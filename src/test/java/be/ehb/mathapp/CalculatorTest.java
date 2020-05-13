@@ -41,6 +41,8 @@ public class CalculatorTest {
                Calculator.divide(1,0);
            }
        });
+       //of korter via Lambda
+        // assertThrows(ArithmeticException.class, () -> Calculator.divide(1,0) );
     }
 
     @Test
@@ -55,6 +57,6 @@ public class CalculatorTest {
             "6, 720"
     })
     void shouldBeCorrectFactorialCSV(int input, int outpout){
-        assertEquals(outpout, Calculator.factorial(input));
+        assertEquals(outpout, Calculator.factorialRecursief(input));
     }
 }
