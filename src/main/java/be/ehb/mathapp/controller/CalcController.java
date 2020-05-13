@@ -16,4 +16,18 @@ public class CalcController {
                    @RequestParam(value = "b") int b){
         return Calculator.sum(a, b);
     }
+
+    @RequestMapping(value = "/power", method = RequestMethod.GET)
+    @ResponseBody
+    public double power(@RequestParam(value = "a") double a,
+                   @RequestParam(value = "b") double b){
+        return Calculator.power(a, b);
+    }
+
+    @RequestMapping(value = "/divide", method = RequestMethod.GET)
+    @ResponseBody
+    public double divide(@RequestParam(value = "a") double a,
+                        @RequestParam(value = "b") double b){
+        return Calculator.divide(a, b);
+    }
 }

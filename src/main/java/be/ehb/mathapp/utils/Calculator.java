@@ -14,13 +14,15 @@ public class Calculator {
         return Math.pow(x, e);
     }
 
-    public static int divide(int x, int y) {
+    public static double divide(double x, double y) {
+        if(y == 0.0 || y == -0.0)
+            throw new ArithmeticException("/ by 0");
         return x/y;
     }
 
     public static int factorial(int input){
         int result = 1;
-        for ( ;input > 1 ; input--)
+        for( ;input > 1 ; input--)
             result *= input;
         return result;
     }
