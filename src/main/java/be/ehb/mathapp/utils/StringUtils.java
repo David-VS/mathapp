@@ -4,9 +4,9 @@ public class StringUtils {
 
     public static boolean isPalindroom(String input){
         //clean up spaces and capital letters
-        String cleanInput = input.trim().toLowerCase();
+        String cleanInput = input.replace(" ", "").toLowerCase();
         //reverse it
-        StringBuffer sb = new StringBuffer(input);
+        StringBuilder sb = new StringBuilder(cleanInput);
         String reversed = sb.reverse().toString();
 
         return cleanInput.equals(reversed);
